@@ -3,4 +3,4 @@ install:
 	poetry install
 
 start:
-	poetry run python app.py
+	poetry run python main.py
