@@ -1,15 +1,15 @@
 import asyncio
 import logging
+import config
 from aiogram import executor
 from googletrans import Translator
 from aiogram import Bot, Dispatcher, types 
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.dispatcher import FSMContext
-from googletrans import Translator
 
 logging.basicConfig(level=logging.INFO)
 
-bot = Bot(token="6683405646:AAH14O-bxWUSZiB-Sec9OelrJuAbYuxsL4E")
+bot = Bot(token=config.BOT_TOKEN, proxy=config.PROXY_URL, parse_mode=types.ParseMode.HTML)
 dp = Dispatcher(bot, storage=MemoryStorage())
       
 channel_id = "@Mutaallim_arabic"
